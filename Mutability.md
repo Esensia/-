@@ -8,4 +8,4 @@
 
 # Call by reference
 
-##### each formal parameter of the function gets a copy of each reference in the argments. In other words, the parameters inside the function become aliases of the actual arguments
+##### each formal parameter of the function gets a copy of each reference in the arguments. In other words, the parameters inside the function become aliases of the actual arguments
