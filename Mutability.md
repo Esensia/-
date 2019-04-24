@@ -29,6 +29,7 @@
 ##### list같은 mutable 변수를 함수에 넘겨줄때, call by reference가 일어난다. 변수의 주소가 함수의 인자로 들어가 값을 바꿔준다.
 
 # immutable vs mutable
+### is_mutable
 ```PYTHON
 def is_ mutable(arg1, arg2) :
 	print(“a의 주소는 %d, b의 주소는 %d”%(id(arg1),id(arg2)))
@@ -37,4 +38,23 @@ def is_ mutable(arg1, arg2) :
 	else:
 		print(type(arg1),”is immutable)
 	pass
+```
+* string
+```PYTHON
+>>> a = “” # string is immutable
+>>> b = a
+>>> b += “1”
+>>> is_mutable(a,b)
+a의 주소는 4338515056, b의 주소는 4341255560
+<class ‘str’> is immutable
+```
+
+* list
+```PYTHON
+>>> a = [] # list is immutable
+>>> b = a
+>>> b.append(1)
+>>> is_mutable(a,b)
+a의 주소는 4373776648, b의 주소는 4373776648
+<class ‘list’> is mutable
 ```
